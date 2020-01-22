@@ -1,0 +1,10 @@
+@import './../../../styles/variables';
+
+section {
+  padding: 4em 4em;
+  background: #f1f5f8;
+  .title {
+    font-family: $primary-font-bold;
+    color: #373737;
+  }
+}

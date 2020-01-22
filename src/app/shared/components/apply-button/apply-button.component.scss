@@ -1,0 +1,14 @@
+@import './.././../../../styles/variables';
+
+.button {
+  font-family: $primary-font-bold;
+  width: 100%;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1.5em;
+  color: #fff;
+  &.apply {
+    background: $button-color;
+  }
+}

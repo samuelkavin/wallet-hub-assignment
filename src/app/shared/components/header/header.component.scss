@@ -1,0 +1,35 @@
+@import './../../../../styles/variables';
+
+header {
+  nav {
+    width: 100%;
+    padding-top: 2em;
+    background: $primary-color;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid #f1f2f3;
+      li {
+        font-family: $primary-font-bold;
+        list-style: none;
+        text-align: center;
+        width: 33.333333%;
+        width: calc(100% / 3);
+        background-color: #fff;
+        border-right: 1px solid #f1f2f3;
+        box-sizing: border-box;
+        padding: 1em;
+        transition: 0.3s;
+        cursor: pointer;
+        &:first-child {
+          border-left: none;
+        }
+        &:hover {
+          background: #f1f2f3;
+        }
+      }
+    }
+  }
+}

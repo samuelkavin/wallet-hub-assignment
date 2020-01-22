@@ -1,0 +1,19 @@
+@import './../../../../styles/variables';
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: $primary-font-exbold;
+  padding-left: 8em;
+  min-height: 100vh;
+  background-size: cover;
+  background: url('/assets/images/bg.png') no-repeat center;
+  background-blend-mode: luminosity;
+  color: #fff;
+  h1 {
+    font-size: 6em;
+    margin-bottom: 5em;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="card mb-3">
+  <div class="card-header-custom d-flex justify-content-between align-items-center">
+    <div class="col-md-8 col-sm-12 pl-0">
+      <h4>{{ card.name }}</h4>
+    </div>
+    <div class="col-md-4 rating">
+      <star-rating
+        value="5"
+        totalstars="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        class="star-rating"
+        size="24px"
+        readonly="false"
+        (rate)="onRate($event)"
+      ></star-rating
+      ><span>{{ card.totalReview }} Reviews</span>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="left-row col-md-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 col-sm-12 img-container">
+          <img src="./../../../assets/images/{{ card.image }}.png" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-6 col-sm-12 text-center credits">
+          <p>Approval Odds†</p>
+          <div class="overall-rating">{{ card.approvalRates }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-row col-md-7">
+      <div class="card-body">
+        <ul class="card-description">
+          <li>
+            Get a $100 cash rewards bonus after you spend {{ 500 | currency: 'USD' }} in purchases
+            in the first 90 days after account oppening.
+          </li>
+          <li>
+            Earn unlimited 1.5% cash rewards on every purcahse.
+          </li>
+          <li>
+            Earn unlimited 1.5% cash rewards on every
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12">
+      <app-apply-button css="button apply">Apply Now</app-apply-button>
+    </div>
+  </div>
+  <hr />
+  <div class="fee-details">See Details Rates & Fees</div>
+</div>

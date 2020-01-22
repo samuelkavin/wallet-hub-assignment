@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Barclaycard CashForward™ World MasterCard",
+    "bank": "Bank of America",
+    "rating": "Very Good",
+    "totalReview": 2232,
+    "description": "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening. Earn unlimited 1.5% cash rewards on every purcahse. Earn unlimited 1.5% cash rewards on every.",
+    "image": "card",
+    "approvalRates": "Very Good"
+  },
+  {
+    "id": 1,
+    "name": "Discover it® Miles",
+    "bank": "Bank of America",
+    "rating": "Very Good",
+    "totalReview": 1011,
+    "description": "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening. Earn unlimited 1.5% cash rewards on every purcahse. Earn unlimited 1.5% cash rewards on every.",
+    "image": "card",
+    "approvalRates": "Good"
+  },
+  {
+    "id": 1,
+    "name": "BankAmericard® Credit Card",
+    "bank": "Bank of America",
+    "rating": "Very Good",
+    "totalReview": 3210,
+    "description": "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening. Earn unlimited 1.5% cash rewards on every purcahse. Earn unlimited 1.5% cash rewards on every.",
+    "image": "card",
+    "approvalRates": "Excellent"
+  },
+  {
+    "id": 1,
+    "name": "Chase Sapphire Reserve®",
+    "bank": "Bank of America",
+    "rating": "Very Good",
+    "totalReview": 532,
+    "description": "Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening. Earn unlimited 1.5% cash rewards on every purcahse. Earn unlimited 1.5% cash rewards on every.",
+    "image": "card",
+    "approvalRates": "Very Good"
+  }
+]
