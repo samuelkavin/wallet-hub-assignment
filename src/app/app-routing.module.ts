@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'list',
     loadChildren: () => import('./main/main.module').then((mod) => mod.MainModule),
     data: {preload: true},
-    pathMatch: 'full',
+    canLoad: [AuthGuard],
   },
   {
     path: 'credit-card',
@@ -14,6 +15,7 @@ const routes: Routes = [
       import('./credit-card/credit-card.module').then((mod) => mod.CreditCardModule),
     data: {preload: true},
   },
+  {path: '', redirectTo: '/list', pathMatch: 'full'},
 ];
 
 @NgModule({

@@ -1,18 +1,6 @@
 <div class="row credit-details">
   <div class="col-md-7 main">
-    <div class="row">
-      <div class="col-12 img-container text-center">
-        <img src="./../../../assets/images/card.png" alt="" />
-      </div>
-      <div class="col-md-12 text-center">
-        <h5>{{ cardDetails?.name }}</h5>
-        <p>
-          Featuring The Motion Code technology with added security features at no extra cost,
-          protection against online fraud & extra 3X Reward Points for online purchases!
-        </p>
-        <p>[Some content goes here]</p>
-      </div>
-    </div>
+    <app-credit-card-content [cardDetails]="cardDetails"></app-credit-card-content>
   </div>
   <div class="col-md-5 sidebar">
     <div class="row success" *ngIf="isSuccess" [@inOutAnimation]>
@@ -20,7 +8,7 @@
         <img src="./../../../assets/images/success.svg" width="20%" alt="success" />
         <h3>Thank you for apply</h3>
         <h5>We'll contact as soon as poosible</h5>
-        <button class="btn btn-primary" [routerLink]="['/']">See More</button>
+        <button class="btn btn-primary" [routerLink]="['/list']">See More</button>
       </div>
     </div>
     <ng-container *ngIf="!isSuccess">
