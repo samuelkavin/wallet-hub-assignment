@@ -1,0 +1,79 @@
+<div class="row credit-details">
+  <div class="col-md-7 main">
+    <div class="row">
+      <div class="col-12 img-container text-center">
+        <img src="./../../../assets/images/card.png" alt="" />
+      </div>
+      <div class="col-md-12 text-center">
+        <h5>{{ cardDetails?.name }}</h5>
+        <p>
+          Featuring The Motion Code technology with added security features at no extra cost,
+          protection against online fraud & extra 3X Reward Points for online purchases!
+        </p>
+        <p>[Some content goes here]</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5 sidebar">
+    <div class="row success" *ngIf="isSuccess" [@inOutAnimation]>
+      <div class="col-12 text-center">
+        <img src="./../../../assets/images/success.svg" width="20%" alt="success" />
+        <h3>Thank you for apply</h3>
+        <h5>We'll contact as soon as poosible</h5>
+        <button class="btn btn-primary" [routerLink]="['/']">See More</button>
+      </div>
+    </div>
+    <ng-container *ngIf="!isSuccess">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h4 class="text-capitalize">Hey {{ name || 'Howdy' }},</h4>
+          <h5>Apply Now</h5>
+          <p>We will help you every step of the way!</p>
+        </div>
+      </div>
+      <div class="row">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="col-md-12 input-wrapper">
+            <input type="number" class="input" placeholder="Phone" formControlName="phone" />
+            <span class="error" *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)">
+              <span *ngIf="phone?.errors?.required">
+                Phone number required
+              </span>
+            </span>
+          </div>
+          <div class="col-md-12 input-wrapper">
+            <input type="email" class="input" placeholder="Email" formControlName="email" />
+            <span class="error" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+              <span *ngIf="email?.errors?.required">
+                Email required
+              </span>
+            </span>
+          </div>
+          <div class="col-md-12">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck1"
+                formControlName="terms"
+                required
+              />
+              <label class="custom-control-label" for="customCheck1"
+                >I agree to RinggitPlus Terms of Use</label
+              >
+            </div>
+          </div>
+          <div class="col-md-12">
+            <app-apply-button
+              css="button apply"
+              [type]="'button'"
+              [disabled]="!form.valid"
+              (click)="onSubmit()"
+              >Apply</app-apply-button
+            >
+          </div>
+        </form>
+      </div>
+    </ng-container>
+  </div>
+</div>

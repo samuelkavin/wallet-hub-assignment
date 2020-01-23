@@ -29,6 +29,9 @@ header {
         &:hover {
           background: #f1f2f3;
         }
+        &.active {
+          background: #cccccc;
+        }
       }
     }
   }

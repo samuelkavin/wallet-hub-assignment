@@ -1,3 +1,4 @@
+import {RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HeaderComponent} from './header/header.component';
@@ -6,7 +7,7 @@ import {ApplyButtonComponent} from './apply-button/apply-button.component';
 
 @NgModule({
   declarations: [HeaderComponent, SliderComponent, ApplyButtonComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [HeaderComponent, SliderComponent, ApplyButtonComponent],
 })
 export class ComponentsModule {}

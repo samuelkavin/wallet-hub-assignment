@@ -56,14 +56,10 @@
     color: $link-color;
     font-size: 1.25em;
   }
-  .apply-btn {
-    font-family: $primary-font-bold;
-    width: 100%;
-    cursor: pointer;
-    background: $button-color;
-    padding: 1em;
-    border-radius: 10px;
-    margin-top: 1.5em;
-    color: #fff;
+  .form-group {
+    margin-bottom: 0;
+    .form-control {
+      padding: 1.5em;
+    }
   }
 }

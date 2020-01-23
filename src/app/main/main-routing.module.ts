@@ -1,7 +1,7 @@
 import {MainComponent} from './main.component';
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {CreditCardListsComponent} from './credit-card-lists/credit-card-lists.component';
+import {CardListComponent} from './card-list/card-list.component';
 
 const mainRoutes: Routes = [
   {
@@ -9,8 +9,8 @@ const mainRoutes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'list',
-        component: CreditCardListsComponent,
+        path: '',
+        component: CardListComponent,
       },
     ],
   },

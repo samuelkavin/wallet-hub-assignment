@@ -1,0 +1,57 @@
+@import './../../../styles/variables';
+
+.main {
+  padding: 2em;
+  .img-container {
+    margin-bottom: 1.5em;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.sidebar {
+  background: $secondary-color;
+  padding: 2em;
+  .success {
+    img {
+      margin-bottom: 1.5em;
+    }
+    h5 {
+      margin-bottom: 1.5em;
+    }
+    .btn-primary {
+      background: $primary-color;
+      border: none;
+    }
+  }
+  form {
+    width: 100%;
+    .input-wrapper {
+      margin-bottom: 1.5em;
+      .input {
+        width: 100%;
+        padding: 0.8em;
+        border-radius: 30px;
+        border: 2px solid #23113a;
+        &::placeholder {
+          font-family: $primary-font;
+          color: #6c757d;
+          font-style: italic;
+          padding-left: 0.5em;
+        }
+      }
+      .error {
+        font-style: italic;
+        font-size: 14px;
+        margin-left: 1em;
+        color: #dc3545;
+        transition: all 2s ease-in-out;
+      }
+    }
+  }
+}
+
+.credit-details {
+  height: 100vh;
+}

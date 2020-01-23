@@ -1,14 +1,13 @@
-import {ICreditCard} from './credit-card-lists.interface';
 import {Component, OnInit} from '@angular/core';
-
-import {CreditCardService} from './../../services/credit-card.service';
+import {CreditCardService} from 'src/app/services/credit-card.service';
+import {ICreditCard} from './card-list.interface';
 
 @Component({
-  selector: 'app-credit-card-lists',
-  templateUrl: './credit-card-lists.component.html',
-  styleUrls: ['./credit-card-lists.component.scss'],
+  selector: 'app-card-list',
+  templateUrl: './card-list.component.html',
+  styleUrls: ['./card-list.component.scss'],
 })
-export class CreditCardListsComponent implements OnInit {
+export class CardListComponent implements OnInit {
   creditCards: ICreditCard;
   constructor(public creditCardService: CreditCardService) {}
 

@@ -3,6 +3,7 @@ export interface ICreditCard {
   name: string;
   bank: string;
   rating: string;
+  start: number;
   totalReview: number;
   description: string;
   image: string;

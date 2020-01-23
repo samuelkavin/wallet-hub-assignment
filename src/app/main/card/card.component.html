@@ -6,7 +6,7 @@
     <div class="col-md-4 rating">
       <star-rating
         value="5"
-        totalstars="5"
+        totalstars="{{ card.star }}"
         checkedcolor="red"
         uncheckedcolor="black"
         class="star-rating"
@@ -21,7 +21,11 @@
     <div class="left-row col-md-5">
       <div class="row align-items-center">
         <div class="col-md-6 col-sm-12 img-container">
-          <img src="./../../../assets/images/{{ card.image }}.png" class="card-img" alt="..." />
+          <img
+            src="./../../../assets/images/{{ card.image }}.png"
+            class="card-img"
+            alt="{{ card.image }}"
+          />
         </div>
         <div class="col-md-6 col-sm-12 text-center credits">
           <p>Approval Odds†</p>
@@ -46,7 +50,18 @@
       </div>
     </div>
     <div class="col-md-5 col-sm-12">
-      <app-apply-button css="button apply">Apply Now</app-apply-button>
+      <div class="form-group" *ngIf="isShowInput" [@fadeIn]>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="customerName"
+          name="customerNames"
+          placeholder="Please enter your name"
+        />
+      </div>
+      <app-apply-button css="button apply" (click)="onClick(customerName)">
+        {{ !isShowInput ? 'Interested' : 'Apply' }}
+      </app-apply-button>
     </div>
   </div>
   <hr />
