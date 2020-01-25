@@ -14,8 +14,9 @@ const routes: Routes = [
     loadChildren: () =>
       import('./credit-card/credit-card.module').then((mod) => mod.CreditCardModule),
     data: {preload: true},
+    canLoad: [AuthGuard],
   },
-  {path: '', redirectTo: '/list', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 
 @NgModule({
