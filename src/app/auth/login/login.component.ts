@@ -24,6 +24,7 @@ export class LoginComponent {
     this.authService.login().subscribe(() => {
       this.setMessage();
       if (this.authService.isLoggedIn) {
+
         const redirect = this.authService.redirectUrl
           ? this.router.parseUrl(this.authService.redirectUrl)
           : '/list';

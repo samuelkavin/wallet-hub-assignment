@@ -15,4 +15,9 @@ export class CreditCardService {
   getCreditCardDetails() {
     return this.http.get('/assets/cardDetails.json');
   }
+
+  getDiscoverCardDetails() {
+    return this.http.get('/assets/discoverDetails.json');
+  }
+
 }

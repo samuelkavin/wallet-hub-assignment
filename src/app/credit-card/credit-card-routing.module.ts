@@ -6,12 +6,6 @@ const creditCardRoutes: Routes = [
   {
     path: '',
     component: CreditCardDetailsComponent,
-    // children: [
-    //   {
-    //     path: 'list',
-    //     component: CreditCardDetailsComponent,
-    //   },
-    // ],
   },
 ];
 

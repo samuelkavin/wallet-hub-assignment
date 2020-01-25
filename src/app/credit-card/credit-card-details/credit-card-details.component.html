@@ -1,6 +1,6 @@
 <div class="row credit-details">
   <div class="col-md-7 main">
-    <app-credit-card-content [cardDetails]="cardDetails"></app-credit-card-content>
+    <app-credit-card-content (selectedCard)="onSelect($event)" [cardDetails]="cardDetails"></app-credit-card-content>
   </div>
   <div class="col-md-5 sidebar">
     <div class="row success" *ngIf="isSuccess" [@inOutAnimation]>

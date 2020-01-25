@@ -34,8 +34,13 @@ export class CreditCardDetailsComponent implements OnInit {
     private fb: FormBuilder,
   ) {}
 
+  onSelect(value: string) {
+    // For demo purpose only, suppose to must call api `Get card details by ID`
+    (value === '1') ? this.loadCreditCardDetail() : this.loadDiscoverCreditDetail();
+  }
+
   ngOnInit() {
-    this.loadCreditCardList();
+    this.loadCreditCardDetail();
     this.name = this.activatedRoute.snapshot.paramMap.get('name');
     this.form = this.fb.group({
       phone: ['', [Validators.required]],
@@ -44,7 +49,14 @@ export class CreditCardDetailsComponent implements OnInit {
     });
   }
 
-  loadCreditCardList() {
+  loadDiscoverCreditDetail() {
+    this.creditCardService.getDiscoverCardDetails().subscribe(
+      (card: ICreditCard) => (this.cardDetails = card),
+      (error) => console.log(error),
+    );
+  }
+
+  loadCreditCardDetail() {
     this.creditCardService.getCreditCardDetails().subscribe(
       (card: ICreditCard) => (this.cardDetails = card),
       (error) => console.log(error),

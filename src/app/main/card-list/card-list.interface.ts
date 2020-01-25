@@ -9,3 +9,8 @@ export interface ICreditCard {
   image: string;
   approvalRates: string;
 }
+
+export interface ITypeOfCard {
+  id: string;
+  name: string;
+}
